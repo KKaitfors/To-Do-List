@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Task Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Task Tracker</h1>
+      <form id="new-task-form">
+        <input
+          type="text"
+          id="new-task-text"
+          placeholder="Add a new task..."
+          autocomplete="off"
+        />
+        <input type="submit" id="new-task-submit" value="Add Task" />
+      </form>
+    </header>
+    <section>
+      <div id="pending-tasks" class="task-div">
+        <h2>Tasks To Do:</h2>
+      </div>
+      <div id="completed-tasks" class="task-div">
+        <h2>Tasks Completed:</h2>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+:root {
+  --blue1: #06283d;
+  --blue2: #1363df;
+  --blue3: #47b5ff;
+  --blue4: #dff6ff;
+  --green: #50d890;
+  --red: #fa4659;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Gill Sans, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--blue2);
+  color: #fff;
+}
+
+header {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.5rem auto 1rem;
+  color: var(--blue4);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+#new-task-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-text {
+  flex: 3 1 0%;
+  padding: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: var(--blue1);
+  font-size: 1.25rem;
+}
+
+#new-task-submit {
+  flex: 1 1 0%;
+  border-radius: 0.5rem;
+  background-color: var(--blue3);
+  color: var(--blue4);
+  font-size: 1.25rem;
+}
+
+#new-task-submit:hover {
+  background-color: #6bc4ff;
+}
+
+#new-task-submit:active {
+  background-color: #2387ca;
+}
+
+.task-div {
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 800px;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: #0c4294;
+}
+
+.task-div h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  border-bottom: 2px solid black;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #2b5697;
+}
+
+.task-to-do {
+  display: flex;
+  margin: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: rgb(182, 182, 182);
+}
+
+.task-text {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.task-text:not([readonly]) {
+  color: rgb(172, 0, 0);
+}
+
+.task-to-do > .task-text {
+  flex: 3 1 64%;
+}
+
+.task-btn {
+  flex: 1 1 12%;
+  border-left: 3px solid black;
+  padding: 1rem;
+}
+
+.complete-btn {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.task-btn:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.task-btn:active {
+  background-color: rgb(119, 118, 118);
+}
+
+.finished-task {
+  display: flex;
+  margin: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: rgb(182, 182, 182);
+}
+
+.finished-task .task-text {
+  width: 100%;
+  padding-right: 6rem;
+  color: grey;
+}
+
+/*IMAGES*/
+
+.task-button-icon {
+  margin: auto;
+  display: block;
+  width: 2rem;
+  height: auto;
+  padding-bottom: 0.5rem;
+}
+
+#check {
+  width: 4rem;
+  height: auto;
+  padding: 0.5rem;
+}
