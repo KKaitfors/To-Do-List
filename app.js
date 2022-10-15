@@ -29,36 +29,36 @@ window.addEventListener("load", () => {
     const task_edit_btn = document.createElement("button");
     task_edit_btn.classList.add("task-btn", "edit-btn");
     task_edit_btn.innerHTML =
-      "<img class='task-button-icon' src='/images/edit-mark.png'/>Edit";
+      "<div><i class='fas fa-edit' aria-hidden='true'></i><br><span>Edit</span></div>";
 
     task_el.appendChild(task_edit_btn);
 
     const task_delete_btn = document.createElement("button");
     task_delete_btn.classList.add("task-btn", "delete-btn");
     task_delete_btn.innerHTML =
-      "<img class='task-button-icon' src='/images/delete-mark.png'/>Delete";
+      "<div><i class='fas fa-trash-alt' aria-hidden='true'></i><br><span>Delete</span></div>";
 
     task_el.appendChild(task_delete_btn);
 
     const task_complete_btn = document.createElement("button");
     task_complete_btn.classList.add("task-btn", "complete-btn");
     task_complete_btn.innerHTML =
-      "<img class='task-button-icon' src='/images/check-mark.png'/>Complete";
+      "<div><i class='far fa-check-circle' aria-hidden='true'></i><br><span>Complete</span></div>";
 
     task_el.appendChild(task_complete_btn);
 
     input.value = "";
 
     task_edit_btn.addEventListener("click", () => {
-      if (task_edit_btn.innerText.toLowerCase() == "edit") {
+      if (task_edit_btn.querySelector(".fa-edit")) {
         task_input_el.removeAttribute("readonly");
         task_input_el.focus();
         task_edit_btn.innerHTML =
-          "<img class='task-button-icon' src='/images/save-mark.png'/>Save";
+          "<div><i class='fas fa-save' aria-hidden='true'></i><br><span>Save</span></div>";
       } else {
         task_input_el.setAttribute("readonly", "readonly");
         task_edit_btn.innerHTML =
-          "<img class='task-button-icon' src='/images/edit-mark.png'/>Edit";
+          "<div><i class='fas fa-edit' aria-hidden='true'></i><br><span>Edit</span></div>";
       }
     });
 
@@ -67,9 +67,8 @@ window.addEventListener("load", () => {
     });
 
     task_complete_btn.addEventListener("click", () => {
-      const check = document.createElement("img");
-      check.setAttribute("id", "check");
-      check.setAttribute("src", "/images/check-mark.png");
+      const check = document.createElement("i");
+      check.setAttribute("class", "far fa-check-circle complete");
       task_el.insertBefore(check, task_input_el);
       task_el.classList.remove("task-to-do");
       task_el.classList.add("finished-task");

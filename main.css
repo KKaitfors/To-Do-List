@@ -148,18 +148,31 @@ button {
   color: grey;
 }
 
-/*IMAGES*/
+/*ICONS*/
 
-.task-button-icon {
-  margin: auto;
-  display: block;
-  width: 2rem;
-  height: auto;
-  padding-bottom: 0.5rem;
+span {
+  font-weight: 600;
+  font-size: 1.1em;
 }
 
-#check {
-  width: 4rem;
-  height: auto;
-  padding: 0.5rem;
+i {
+  padding: 5px;
+  font-size: 2em;
+  text-align: center;
+}
+
+i.fa-check-circle {
+  color: green;
+}
+
+i.fa-trash-alt {
+  color: darkred;
+}
+
+i.fa-edit {
+  color: purple;
+}
+
+i.fa-save {
+  color: blue;
 }
